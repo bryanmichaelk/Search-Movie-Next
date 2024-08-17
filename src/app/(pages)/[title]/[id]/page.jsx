@@ -106,9 +106,9 @@ export default function MovieDetail() {
                   </div>
                 </div>
                 <div className="flex flex-wrap items-center mt-4 gap-2">
-                  {data.genre.map((genre) => {
+                  {data.genre.map((genre, index) => {
                     return (
-                      <span className="text-neutral-300 rounded-2xl px-4 py-1 flex justify-center items-center bg-gray-400">
+                      <span key={index} className="text-neutral-300 rounded-2xl px-4 py-1 flex justify-center items-center bg-gray-400">
                         {genre}
                       </span>
                     );
