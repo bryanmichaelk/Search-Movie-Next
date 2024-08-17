@@ -7,6 +7,7 @@ import axios from "axios";
 import useSWR from "swr";
 import Loading from "@/app/loading";
 import { favourites } from "../services/favouritemovie.service";
+import Error from "./error";
 
 const MoviePage = () => {
   const [value, setValue] = useState("");
