@@ -8,7 +8,6 @@ import useSWR from "swr";
 import Loading from "@/app/loading";
 import { favourites } from "../services/favouritemovie.service";
 
-
 const MoviePage = () => {
   const [value, setValue] = useState("");
   const [fetchApi, setFetchApi] = useState([]);

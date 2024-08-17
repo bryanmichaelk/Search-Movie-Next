@@ -97,12 +97,7 @@ export default function MovieDetail() {
                     <p className="text-sm font-medium leading-none text-gray-500 dark:text-gray-400">
                       {data.rating}
                     </p>
-                    <Link
-                      href="#"
-                      className="text-sm font-medium leading-none text-gray-900 underline hover:no-underline dark:text-white"
-                    >
-                      345 Reviews
-                    </Link>
+                  
                   </div>
                 </div>
                 <div className="flex flex-wrap items-center mt-4 gap-2">

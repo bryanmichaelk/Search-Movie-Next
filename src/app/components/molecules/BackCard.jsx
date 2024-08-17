@@ -1,5 +1,4 @@
 import React from "react";
-import Button from "../atom/Button";
 
 function BackCard(props) {
   const { id, plot, genre, rating, director, actors, onClick } = props;

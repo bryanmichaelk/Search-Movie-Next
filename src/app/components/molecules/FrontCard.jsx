@@ -1,10 +1,9 @@
 import React from "react";
 import Image from "next/image";
-import { useState } from "react";
+
 
 function FrontCard(props) {
   const { title, year, poster, rating } = props;
-  const [currentColor, setCurrentColor] = useState("none");
   return (
     <div className="w-full h-full flex flex-col items-center justify-center">
       <Image src={poster} alt={title} className="w-full rounded-xl shadow" width={220} height={310} />
