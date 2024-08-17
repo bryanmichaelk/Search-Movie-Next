@@ -8,7 +8,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Loading from "@/app/loading";
 import Button from "@/app/components/atom/Button";
-import Error from "../../error";
+import Error from "@/app/(pages)/error";
 import { IoChevronBackOutline } from "react-icons/io5";
 import {
   favourites,
