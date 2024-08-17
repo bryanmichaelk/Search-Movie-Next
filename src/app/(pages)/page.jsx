@@ -7,7 +7,7 @@ import axios from "axios";
 import useSWR from "swr";
 import Loading from "@/app/loading";
 import { favourites } from "../services/favouritemovie.service";
-import Error from "@/app/(pages)/error";
+
 
 const MoviePage = () => {
   const [value, setValue] = useState("");
@@ -84,7 +84,7 @@ const MoviePage = () => {
     >
       <section className="pt-[120px] px-8 flex flex-col gap-8 max-w-[1280px] m-auto pb-8 min-h-screen">
         {isLoading && <Loading />}
-        {error && <Error error={error} />}
+        {error && <p className="text-red-600 font-bold">Error!: {error}</p>}
         {!isLoading && !error && (
           <>
             <Genres

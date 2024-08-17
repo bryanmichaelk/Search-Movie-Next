@@ -8,7 +8,6 @@ import Image from "next/image";
 import Link from "next/link";
 import Loading from "@/app/loading";
 import Button from "@/app/components/atom/Button";
-import Error from "@/app/(pages)/error";
 import { IoChevronBackOutline } from "react-icons/io5";
 import {
   favourites,
@@ -50,7 +49,7 @@ export default function MovieDetail() {
         className={`min-h-screen  px-4 mb-10 ${isLoading ? "" : "pt-[110px]"}`}
       >
         {isLoading && <Loading />}
-        {error && <Error error={error.message} />}
+        {error && <p className="text-red-600 font-bold">Error!: {error}</p>}
         {!isLoading && !error && (
           <div className="max-w-screen-xl p-8 mx-auto shadow-xl rounded-lg">
             <div className="lg:grid lg:grid-cols-2 lg:gap-8 xl:gap-16">
