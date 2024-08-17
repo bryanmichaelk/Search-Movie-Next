@@ -19,7 +19,7 @@ const MoviePage = () => {
   useEffect(() => {
     console.log(favourites);
     setFavourites(favourites);
-  }, [favourites]);
+  }, []);
 
   const fetcher = (url) => axios.get(url).then((res) => res.data);
   const { data, error, isLoading } = useSWR(
