@@ -21,7 +21,7 @@ const MoviePage = () => {
     setFavourites(favourites);
   }, []);
 
-  const fetcher = (url) => axios.get(url).then((res) => res.data);
+  const fetcher = (url) => axios.get(url).then((res) => res.data).catch((err) => console.log(err));
   const { data, error, isLoading } = useSWR(
     "https://freetestapi.com/api/v1/movies",
     fetcher
@@ -83,7 +83,7 @@ const MoviePage = () => {
     >
       <section className="pt-[120px] px-8 flex flex-col gap-8 max-w-[1280px] m-auto pb-8 min-h-screen">
         {isLoading && <Loading />}
-        {error && <p className="text-red-600 font-bold">Error!: {error}</p>}
+        {error && <p className="text-red-600 font-bold">Error!: {error.message}</p>}
         {!isLoading && !error && (
           <>
             <Genres
