@@ -18,7 +18,7 @@ import {
 export default function MovieDetail() {
   const pathname = usePathname();
   const id = pathname.split("/").pop();
-  const fetcher = (url) => axios.get(url).then((res) => res.data);
+  const fetcher = (url) => axios.get(url).then((res) => res.data).catch((err) => console.log(err));
   const { data, error, isLoading } = useSWR(
     `https://freetestapi.com/api/v1/movies/${id}`,
     fetcher
